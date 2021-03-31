@@ -1,3 +1,11 @@
+# About Me
+
+[Live here!](https://thomaslipman.vercel.app)
+
+The rest of the readme file will be updated later.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
