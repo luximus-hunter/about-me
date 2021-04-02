@@ -58,7 +58,7 @@ const Home: FC = () => {
       <Grid centerItems cols={2}>
         <Grid rows={2}>
           <Card centerItems>
-            <img src='/pfp.png' className={styles.ProfilePicture} />
+            {loading ? <Spinner /> : <img src='/pfp.png' className={styles.ProfilePicture} />}
           </Card>
           <Card centerItems>
             <div>
