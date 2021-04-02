@@ -4,7 +4,11 @@
 
 Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel.app).
 
+</center>
+
 ---
+
+<center>
 
 ![grade](https://www.code-inspector.com/project/20790/status/svg)
 ![lines](https://img.shields.io/tokei/lines/github/luximus-hunter/about-me)
