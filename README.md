@@ -1,10 +1,10 @@
-# About Me Website
+<center>
 
-Build in TypeScript using React
+# About Me - Website
 
-Check it out [here](https://thomaslipman.vercel.app)
+Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel.app).
 
-The rest of the readme file will be updated later.
+---
 
 ![grade](https://www.code-inspector.com/project/20790/status/svg)
 ![lines](https://img.shields.io/tokei/lines/github/luximus-hunter/about-me)
@@ -33,3 +33,7 @@ The rest of the readme file will be updated later.
 ![firefox](https://img.shields.io/badge/tested%20in-firefox-FF7139?logo=firefox-browser)
 
 ![coffee](https://img.shields.io/badge/feuled%20by-caffeine-604020?logo=coffeescript)
+
+</center>
+
+---
