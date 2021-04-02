@@ -13,14 +13,12 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   });
 
   if (data !== null) {
-    res.statusCode = 200;
-    res.json({
+    res.status(200).json({
       error: false,
       message: 'fetched "about" in language ' + config.DefaultLanguage,
       data
     });
   } else {
-    res.statusCode = 501;
-    res.json({ error: true, message: 'language not found', data: null });
+    res.status(200).json({ error: true, message: 'language not found', data: null });
   }
 };

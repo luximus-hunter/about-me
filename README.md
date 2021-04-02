@@ -4,6 +4,8 @@
 
 The rest of the readme file will be updated later.
 
+![codeGrade](https://www.code-inspector.com/project/20790/status/svg)
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

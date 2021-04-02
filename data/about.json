@@ -1,11 +1,11 @@
 [
   {
-    "lang": "en-GB",
+    "lang": "en",
     "title": "Hi there!",
-    "content": [
+    "lines": [
       "I'm Thomas, a junior software developer.",
       "I study software and web development at my local college. As of now I'm about to enroll into my next years of college after getting my degree.",
-      "My specialties are mostly web development, using primarily ReactJS and TypeScript. Using the skills I've acquired while working for [LoyLap](https://www.loylap.com/) in Dublin, Ireland. There I've made a web app for designing giftcards for customer use. There the user can create giftcards by uploading photos using uploadcare, edit and possition text and edit their company data.",
+      "My specialties are mostly web development, using primarily ReactJS and TypeScript, and using the skills I've acquired while working for [LoyLap](https://www.loylap.com/) in Dublin, Ireland. There I've made a web app for designing giftcards for customer use. There the user can create giftcards by uploading photos using uploadcare, edit and possition text and edit their company data.",
       "Currently I'm working at [Expedient B.V.](https://www.expedient.nl/) for an internship. There they work with C# and .NET, using the DotNetNuke framework. As so far, I've created a new system for the generation of PDF files when you make a checkout in a webshop using ReportViewers. That system makes customizing the PDFs a lot easier.",
       "I've Done courses on HTML5, CSS3, SASS, JavaScript, TypeScript, ReactJS and React Hooks. In college I've studied C#, .NET and SQL. Java is on the way!"
     ]
@@ -13,6 +13,12 @@
   {
     "lang": "nl",
     "title": "Hallo daar!",
-    "content": ["De nederlandse vertaling is nog onderweg."]
+    "lines": [
+      "Ik ben Thomas, een beginnende softwareontwikkelaar.",
+      "Ik studeer software en webontwikkeling op de hoge school in mijn buurt. Op dit moment heb ik bijna mijn diploma, en heb ik mij ingeschreven voor een vervolgstudie.",
+      "Mijn specialiteiten zijn voornamelijk webontwikkeling, waarbij ik voornamelijk ReactJS en TypeScript gebruik. Gebruikmakend van de vaardigheden die ik heb opgedaan tijdens mijn werk voor [LoyLap](https://www.loylap.com/) in Dublin, Ierland. Daar heb ik een webapp gemaakt voor het ontwerpen van cadeaukaarten voor gebruik door klanten. Daar kan de gebruiker een cadeaukaart maken door foto's te uploaden met uploadcare, tekst te bewerken en te verplaatsen, en de bedrijfsgegevens te bewerken.",
+      "Momenteel werk ik bij [Expedient B.V.] (https://www.expedient.nl/) voor een stage. Daar werken ze met C # en .NET, gebruikmakend van het DotNetNuke framework. Tot nu toe heb ik een nieuw systeem gemaakt voor het genereren van pdf-bestanden wanneer je afrekent in een webshop met ReportViewers. Dat systeem maakt het aanpassen van de pdf's een stuk eenvoudiger.",
+      "Ik heb cursussen gedaan voor HTML5, CSS3, SASS, JavaScript, TypeScript, ReactJS en React Hooks. Op school heb ik C#, .NET en SQL gestudeerd. Java komt eraan!"
+    ]
   }
 ]

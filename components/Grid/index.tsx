@@ -14,11 +14,11 @@ const Grid: FC<Props> = ({ children, cols = 1, rows = 1, centerItems = false }) 
 
   const value = 'auto';
 
-  for (let i = 0; i < cols; i++) {
+  for (let i: number = 0; i < cols; i++) {
     colsValue += value + ' ';
   }
 
-  for (let i = 0; i < rows; i++) {
+  for (let i: number = 0; i < rows; i++) {
     rowsValue += value + ' ';
   }
 
