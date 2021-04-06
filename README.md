@@ -41,3 +41,5 @@ Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel
 </center>
 
 ---
+
+Code inspector: [here](https://frontend.code-inspector.com/public/project/20790/about-me/dashboard)
