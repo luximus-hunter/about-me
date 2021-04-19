@@ -43,6 +43,8 @@ const Home: FC = () => {
       if (e.lang === lang) {
         setContent(e);
       }
+
+      return true;
     });
 
     setLoading(false);
@@ -56,7 +58,7 @@ const Home: FC = () => {
             {loading ? (
               <Spinner />
             ) : (
-              <img alt='image of me' src={profilePicture} className={styles.ProfilePicture} />
+              <img alt='me' src={profilePicture} className={styles.ProfilePicture} />
             )}
           </Card>
           <Card centerItems>
