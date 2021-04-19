@@ -1,7 +1,8 @@
+import { FC, Suspense } from 'react';
 import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { FC } from 'react';
 import Home from './pages/Home';
+import Spinner from './components/Spinner';
 
 const App: FC = () => {
   let lang: string = navigator.language;
@@ -15,12 +16,14 @@ const App: FC = () => {
   }
 
   return (
-    <Router>
-      <Switch>
-        <Route path='/' component={Home} />
-        <Redirect to='/' />
-      </Switch>
-    </Router>
+    <Suspense fallback={Spinner}>
+      <Router>
+        <Switch>
+          <Route path='/' component={Home} />
+          <Redirect to='/' />
+        </Switch>
+      </Router>
+    </Suspense>
   );
 };
 
