@@ -10,7 +10,7 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
+    name: Checking
     runs-on: ubuntu-latest
 
     strategy:
