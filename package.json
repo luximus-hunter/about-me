@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "format": "prettier -w ./src ./.github",
-    "lint": "prettier -c ./src ./.github"
+    "lint": "prettier -c ./src ./.github",
+    "test": "yarn build"
   },
   "eslintConfig": {
     "extends": [
