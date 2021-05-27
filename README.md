@@ -23,7 +23,6 @@ Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel
 ![prettier](https://img.shields.io/badge/code_style-prettier-F7B93E.svg?logo=prettier)
 
 ![reactjs](https://img.shields.io/badge/framework-react.js-61DAFB?logo=react)
-![nextjs](https://img.shields.io/badge/framework-next.js-000000?logo=next.js)
 ![nodejs](https://img.shields.io/badge/powered%20by-node.js-339933?logo=node.js)
 
 ![vercel](https://img.shields.io/badge/hosted%20by-vercel-000000?logo=vercel)
