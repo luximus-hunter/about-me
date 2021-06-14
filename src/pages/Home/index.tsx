@@ -8,7 +8,7 @@ import Grid from '../../components/Grid';
 import Spinner from '../../components/Spinner';
 import about from '../../data/about.json';
 import config from '../../config.json';
-import profilePicture from '../../assets/pfp.png';
+import profilePicture from '../../assets/profile-picture.jpg';
 import styles from './home.module.scss';
 
 interface Content {
