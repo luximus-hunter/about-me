@@ -33,6 +33,4 @@ Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel
 
 ---
 
-GitKraken Board: [here](https://app.gitkraken.com/glo/board/YMdJk0EZ3QASFhVP)
-
 Code Inspector: [here](https://frontend.code-inspector.com/public/project/20790/about-me/dashboard)
