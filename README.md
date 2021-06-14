@@ -1,4 +1,3 @@
-
 # About Me - Website
 
 Build in TypeScript using React. Check it out [here](https://thomaslipman.vercel.app).
