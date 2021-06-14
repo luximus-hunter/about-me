@@ -28,12 +28,11 @@ const Grid: FC<Props> = ({ children, cols = 1, rows = 1, centerItems = false }) 
   };
 
   if (centerItems) {
-    // style.placeItems = 'center';
     style.textAlign = 'center';
   }
 
   return (
-    <div style={style} className={styles.Grid}>
+    <div style={style} className={styles.grid}>
       {children}
     </div>
   );

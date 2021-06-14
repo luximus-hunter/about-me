@@ -19,7 +19,7 @@ const Card: FC<Props> = ({ children, height, centerItems = false }) => {
   }
 
   return (
-    <div style={style} className={styles.Card}>
+    <div style={style} className={styles.card}>
       {children}
     </div>
   );
