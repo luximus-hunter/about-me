@@ -58,16 +58,16 @@ const Home: FC = () => {
             {loading ? (
               <Spinner />
             ) : (
-              <img alt='me' src={profilePicture} className={styles.ProfilePicture} />
+              <img alt='me' src={profilePicture} className={styles.profile_picture} />
             )}
           </Card>
           <Card centerItems>
             <div>
               <Button onClick={() => changeLang('nl')}>
-                <Flag className={styles.Flag} lang='nl' />
+                <Flag className={styles.flag} lang='nl' />
               </Button>
               <Button onClick={() => changeLang('en')}>
-                <Flag className={styles.Flag} lang='gb' />
+                <Flag className={styles.flag} lang='gb' />
               </Button>
             </div>
           </Card>

@@ -4,12 +4,11 @@ import styles from './button.module.scss';
 
 interface Props {
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  active?: boolean;
 }
 
-const Card: FC<Props> = ({ children, onClick, active = false }) => {
+const Card: FC<Props> = ({ children, onClick }) => {
   return (
-    <button className={active ? styles.ButtonActive : styles.Button} onClick={onClick}>
+    <button className={styles.button} onClick={onClick}>
       {children}
     </button>
   );
