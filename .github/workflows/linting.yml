@@ -5,25 +5,20 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-  schedule:
-    - cron: '43 12 * * 0'
 
 jobs:
-  analyze:
-    name: Checking
+  prettier:
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript']
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Check linting
-        run: npm run lint
+    - name: Prettify code
+      uses: creyD/prettier_action@v3.3
+      with:
+        prettier_options: --write **/*.{js,jsx,ts,tsx,css,scss,md}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
