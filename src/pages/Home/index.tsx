@@ -1,4 +1,4 @@
-import { FC, Fragment, lazy, useEffect, useState } from 'react';
+import { FC, Fragment, useEffect, useState } from 'react';
 
 import Button from '../../components/Button';
 import Card from '../../components/Card';
