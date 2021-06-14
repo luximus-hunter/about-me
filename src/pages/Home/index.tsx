@@ -1,16 +1,15 @@
-import { FC, Fragment, lazy, useEffect, useState } from 'react';
+import { FC, Fragment, useEffect, useState } from 'react';
 
 import Button from '../../components/Button';
+import Card from '../../components/Card';
+import Container from '../../components/Container';
+import Flag from '../../components/Flag';
+import Grid from '../../components/Grid';
 import Spinner from '../../components/Spinner';
 import about from '../../data/about.json';
 import config from '../../config.json';
 import profilePicture from '../../assets/pfp.png';
 import styles from './home.module.scss';
-
-const Card = lazy(() => import('../../components/Card'));
-const Container = lazy(() => import('../../components/Container'));
-const Flag = lazy(() => import('../../components/Flag'));
-const Grid = lazy(() => import('../../components/Grid'));
 
 interface Content {
   title: string;
