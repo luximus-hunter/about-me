@@ -1,6 +1,3 @@
-$body-background: #22272e;
-$body-foreground: #808c99;
-
 $font-size: 16px;
 $font-incrementor: 1.5;
 
@@ -12,14 +9,14 @@ body,
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $body-background;
-  color: $body-foreground;
   min-height: 100vh;
+  color: #191C4F;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -34,10 +31,6 @@ img {
   margin: 0;
   padding: 0;
   font-size: $font-size;
-}
-
-#root {
-  padding: 10px;
 }
 
 h1 {
