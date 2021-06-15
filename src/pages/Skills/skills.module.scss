@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+.profile_picture {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.flag {
+  border-radius: 3px;
+  border: 1px solid $body-foreground;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+}

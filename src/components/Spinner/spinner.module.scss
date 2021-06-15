@@ -3,7 +3,7 @@
 .spinner,
 .spinner:before,
 .spinner:after {
-  background: $body-foreground;
+  background: #000;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
@@ -11,7 +11,7 @@
 }
 
 .spinner {
-  color: $body-foreground;
+  color: #000;
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;
