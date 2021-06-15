@@ -1,9 +1,8 @@
 import { FC, Fragment, useEffect, useState } from 'react';
+import { Link, RouteComponentProps, useHistory } from 'react-router-dom';
 
-import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Container from '../../components/Container';
-import Flag from '../../components/Flag';
 import Grid from '../../components/Grid';
 import Spinner from '../../components/Spinner';
 import about from '../../data/about.json';
@@ -14,41 +13,48 @@ import styles from './home.module.scss';
 interface Content {
   title: string;
   lines: string[];
+  lang: string;
 }
 
-const Home: FC = () => {
+interface RouterProps {
+  lang: string;
+}
+
+interface Props extends RouteComponentProps<RouterProps> {}
+
+const Home: FC<Props> = ({ match }) => {
+  const history = useHistory();
+
+  const { lang } = match.params;
+
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState<Content>();
 
-  const changeLang = (newLang: string) => {
-    const lang = localStorage.getItem('lang');
-
-    if (newLang !== lang) {
-      localStorage.setItem('lang', newLang);
+  const loadData = () => {
+    if (lang === content?.lang) {
+      return;
     }
 
-    loadData();
-  };
-
-  useEffect(() => {
-    loadData();
-  }, [content]);
-
-  const loadData = () => {
     setLoading(true);
 
-    const lang: any = localStorage.getItem('lang') || config.defaultLanguage;
+    let redirect = true;
 
     about.map((e) => {
       if (e.lang === lang) {
         setContent(e);
+        redirect = false;
       }
-
-      return true;
     });
+
+    if (redirect) {
+      setContent(about[0]);
+      history.push('/' + config.defaultLanguage);
+    }
 
     setLoading(false);
   };
+
+  loadData();
 
   return (
     <Container>
@@ -63,12 +69,10 @@ const Home: FC = () => {
           </Card>
           <Card centerItems>
             <div>
-              <Button onClick={() => changeLang('nl')}>
-                <Flag className={styles.flag} lang='nl' />
-              </Button>
-              <Button onClick={() => changeLang('en')}>
-                <Flag className={styles.flag} lang='gb' />
-              </Button>
+              <Link to='/en'>View in English</Link>
+            </div>
+            <div>
+              <Link to='/nl'>Bekijk in het Nederlands</Link>
             </div>
           </Card>
         </Grid>

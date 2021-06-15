@@ -3,6 +3,7 @@ import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-d
 
 import Home from './pages/Home';
 import Spinner from './components/Spinner';
+import config from './config.json'
 
 const App: FC = () => {
   let lang: string = navigator.language;
@@ -19,7 +20,8 @@ const App: FC = () => {
     <Suspense fallback={Spinner}>
       <Router>
         <Switch>
-          <Route path='/' component={Home} />
+          <Route path='/' exact render={() => <Redirect to={"/" + config.defaultLanguage} />} />
+          <Route path='/:lang' exact component={Home} />
           <Redirect to='/' />
         </Switch>
       </Router>
