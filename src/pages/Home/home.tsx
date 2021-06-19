@@ -1,13 +1,15 @@
 import { FC, Fragment, useEffect, useState } from 'react';
 import { Link, RouteComponentProps, useHistory } from 'react-router-dom';
 
+import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Container from '../../components/Container';
 import Grid from '../../components/Grid';
 import Spinner from '../../components/Spinner';
+import View from '../../components/View';
 import about from '../../data/about.json';
 import config from '../../config.json';
-import profilePicture from '../../assets/profile-picture.jpg';
+import profilePicture from '../../assets/profile-picture-outline.png';
 import styles from './home.module.scss';
 
 interface Content {
@@ -27,15 +29,12 @@ const Home: FC<Props> = ({ match }) => {
 
   const { lang } = match.params;
 
-  const [loading, setLoading] = useState(true);
   const [content, setContent] = useState<Content>();
 
   const loadData = () => {
     if (lang === content?.lang) {
       return;
     }
-
-    setLoading(true);
 
     let redirect = true;
 
@@ -50,46 +49,28 @@ const Home: FC<Props> = ({ match }) => {
       setContent(about[0]);
       history.push('/' + config.defaultLanguage);
     }
-
-    setLoading(false);
   };
 
   loadData();
 
   return (
-    <Container>
-      <Grid centerItems cols={2}>
-        <Grid rows={2}>
-          <Card centerItems>
-            {loading ? (
-              <Spinner />
-            ) : (
-              <img alt='me' src={profilePicture} className={styles.profile_picture} />
-            )}
-          </Card>
-          <Card centerItems>
-            <div>
-              <Link to='/en'>View in English</Link>
-            </div>
-            <div>
-              <Link to='/nl'>Bekijk in het Nederlands</Link>
-            </div>
-          </Card>
-        </Grid>
-        <Card centerItems>
-          {loading ? (
-            <Spinner />
-          ) : (
-            <Fragment>
-              <h1>{content?.title}</h1>
-              {content?.lines?.map((line, index) => (
-                <p key={index}>{line}</p>
-              ))}
-            </Fragment>
-          )}
-        </Card>
-      </Grid>
-    </Container>
+    <View
+      centerItems
+      style={{ backgroundImage: 'linear-gradient(30deg, rgb(236, 136, 36), rgb(197, 75, 197))' }}
+    >
+      <div className={styles.container}>
+        <img src={profilePicture} className={styles.profile_picture} />
+        <div className={styles.text_container}>
+          <div>
+            <h2>Junior</h2>
+            <h1>UI/UX Developer</h1>
+          </div>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <Button>My Skills</Button>
+      </div>
+    </View>
   );
 };
 
