@@ -1,26 +1,29 @@
-@import '../../index.scss';
-
 .button {
-  color: $body-foreground;
+  $color: #ffffff;
+  $translate-size: 5px;
+  $time: 100ms;
+
+  color: $color;
   padding: 10px;
-  border: 1px solid $body-foreground;
+  font-size: 20px;
+  border: 3px solid $color;
   background-color: transparent;
   border-radius: 8px;
-  height: 62px;
-  background-position: center;
-  transition: background 0.5s;
+  transition: box-shadow $time, transform $time;
+  box-shadow: 0 0 0 $color;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-right: 10px;
   }
 
   &:hover {
-    background: transparent radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+    transform: translateY(-$translate-size/2);
+    box-shadow: 0 $translate-size 0 $color;
   }
 
   &:active {
-    background-color: #fff;
-    background-size: 100%;
-    transition: background 0s;
+    transform: translateY($translate-size);
+    box-shadow: 0 0 0 $color;
   }
 }

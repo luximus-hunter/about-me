@@ -6,27 +6,32 @@ interface Props {
   centerItems?: boolean;
   color?: string;
   image?: string;
+  style?: CSSProperties;
 }
 
-const View: FC<Props> = ({ children, centerItems = false, color, image }) => {
-  const style: CSSProperties = {};
+const View: FC<Props> = ({ children, centerItems = false, color, image, style }) => {
+  let css: CSSProperties = {};
+
+  if (style) {
+    css = style;
+  }
 
   if (centerItems) {
-    style.display = 'grid';
-    style.placeItems = 'center';
-    style.textAlign = 'center';
+    css.display = 'grid';
+    css.placeItems = 'center';
+    css.textAlign = 'center';
   }
 
   if (color) {
-    style.backgroundColor = color;
+    css.backgroundColor = color;
   }
 
   if (image) {
-    style.backgroundImage = 'url(image)';
+    css.backgroundImage = 'url(image)';
   }
 
   return (
-    <div style={style} className={styles.view}>
+    <div style={css} className={styles.view}>
       {children}
     </div>
   );

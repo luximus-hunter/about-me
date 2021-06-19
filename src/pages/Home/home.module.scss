@@ -1,16 +1,24 @@
-@import '../../index.scss';
-
-.profile_picture {
-  width: 100%;
-  border-radius: 8px;
+.container {
+  display: flex;
 }
 
-.flag {
-  border-radius: 3px;
-  border: 1px solid $body-foreground;
+.profile_picture {
+  width: 50%;
+  border-radius: 50%;
+  max-width: 512px;
+  max-height: 512px;
+}
 
-  &:not(:last-child) {
-    margin-right: 10px;
-    border-radius: 8px;
+.text_container {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: block;
   }
 }
