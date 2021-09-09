@@ -11,13 +11,13 @@ const fs = require('fs');
     // Understand if it's dist or build folder
     const folderName = fs.existsSync('dist') ? 'dist' : 'build';
     await execa('git', ['--work-tree', folderName, 'add', '--all']);
-    await execa('git', ['--work-tree', folderName, 'commit', '-m', 'live']);
-    console.log('🎈 Pushing to live');
+    await execa('git', ['--work-tree', folderName, 'commit', '-m', '🌍 Live build ' + Date.now()]);
+    console.log('🌍 Pushing');
     await execa('git', ['push', 'origin', 'HEAD:live', '--force']);
     // await execa("rm", ["-r", folderName]);
     await execa('git', ['checkout', '-f', 'master']);
     await execa('git', ['branch', '-D', 'live']);
-    console.log('🚀 Successfully deployed');
+    console.log('🚀 Deployed');
   } catch (e) {
     console.log(e.message);
     process.exit(1);
