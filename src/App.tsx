@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import Card from './components/Card';
+import Container from './components/Container';
+import Header from './sections/Header';
+import Row from './components/Row';
+import imgDiscord from './assets/logos/discord.png';
+import imgGithub from './assets/logos/github.png';
+import imgSpotify from './assets/logos/spotify.png';
 import styles from './App.module.scss';
 
-function App() {
-  return (
-    <div className={styles.app}>
-      <header className={styles.header}>
-        <img src={logo} className={styles.logo} alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className={styles.link}
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className={styles.app}>
+    <Header />
+    <Container>
+      <Row>
+        <Card
+          title='Spotify'
+          info='LXMS'
+          image={imgSpotify}
+          link='https://open.spotify.com/user/yxmq93tlmfomm2ir62cs0bq0u'
+        />
+        <Card
+          title='Github'
+          info='luximus-hunter'
+          image={imgGithub}
+          link='https://github.com/luximus-hunter'
+        />
+        <Card title='Discord' info='Luximus#2048' image={imgDiscord} />
+      </Row>
+    </Container>
+  </div>
+);
 
 export default App;
