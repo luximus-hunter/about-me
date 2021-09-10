@@ -3,24 +3,33 @@ const fs = require('fs');
 
 (async () => {
     try {
+        // checkout
         await execa('git', ['checkout', '--orphan', 'live']);
-        console.log('📃 Formatting');
+
+        // format
+        console.log('📃 Formatting');        
         await execa('npm', ['run', 'lint']);
+
+        // build
         console.log('🚧 Building');
         await execa('npm', ['run', 'build']);
-        // Understand if it's dist or build folder
-        const folderName = fs.existsSync('dist') ? 'dist' : 'build';
-        await execa('git', ['--work-tree', folderName, 'add', '--all']);
+
+        // add CNAME
+        await fs.writeFile(`./build/CNAME`, 'lxms.nl', () => {});
+
+        // add and commit
+        await execa('git', ['--work-tree', 'build', 'add', '--all']);
         await execa('git', [
             '--work-tree',
-            folderName,
+            'build',
             'commit',
             '-m',
             '🌍 Live build ' + Date.now()
         ]);
+
+        // push to server
         console.log('🌍 Pushing');
         await execa('git', ['push', 'origin', 'HEAD:live', '--force']);
-        // await execa("rm", ["-r", folderName]);
         await execa('git', ['checkout', '-f', 'master']);
         await execa('git', ['branch', '-D', 'live']);
         console.log('🚀 Deployed');
