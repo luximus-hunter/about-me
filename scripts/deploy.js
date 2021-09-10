@@ -7,7 +7,7 @@ const fs = require('fs');
         await execa('git', ['checkout', '--orphan', 'live']);
 
         // format
-        console.log('📃 Formatting');        
+        console.log('📃 Formatting');
         await execa('npm', ['run', 'lint']);
 
         // build
@@ -19,13 +19,7 @@ const fs = require('fs');
 
         // add and commit
         await execa('git', ['--work-tree', 'build', 'add', '--all']);
-        await execa('git', [
-            '--work-tree',
-            'build',
-            'commit',
-            '-m',
-            '🌍 Live build ' + Date.now()
-        ]);
+        await execa('git', ['--work-tree', 'build', 'commit', '-m', '🌍 Live build ' + Date.now()]);
 
         // push to server
         console.log('🌍 Pushing');
