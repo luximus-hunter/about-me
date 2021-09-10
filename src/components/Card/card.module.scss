@@ -1,57 +1,57 @@
 .container {
-  color: #fff;
-  background-color: #0002;
+    color: #fff;
+    background-color: #0002;
 
-  width: 30%;
-  margin-right: 5%;
+    width: 30%;
+    margin-right: 5%;
 
-  text-align: center;
+    text-align: center;
 
-  border: 2px solid #0008;
-  border-radius: 30px;
+    border: 2px solid #0008;
+    border-radius: 30px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px #0004;
 
-  &:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .logo {
-  width: 100%;
-  padding: 20px;
+    width: 100%;
+    padding: 20px;
 }
 
 .content {
-  background-color: #0002;
-  border-radius: 30px 30px 0 0;
-  padding: 20px;
+    background-color: #0002;
+    border-radius: 30px 30px 0 0;
+    padding: 20px;
 }
 
 .title,
 .content,
 .link {
-  display: block;
+    display: block;
 }
 
 .title,
 .info {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .title {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .info {
-  color: #fff8;
+    color: #fff8;
 }
 
 @media only screen and (max-width: 700px) {
-  .container {
-    width: 90%;
-    margin: auto !important;
-  }
+    .container {
+        width: 90%;
+        margin: auto !important;
+    }
 }

@@ -1,7 +1,7 @@
 import styles from './row.module.scss';
 
 interface Props {
-  children?: any;
+    children?: any;
 }
 
 const Row = ({ children }: Props) => <div className={styles.row}>{children}</div>;

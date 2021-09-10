@@ -1,3 +1,51 @@
+.container {
+    position: relative;
+}
+
 .banner {
-  width: 100%;
+    width: 100%;
+}
+
+.center_container {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 30%;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px #000;
+    width: 100%;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 75px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 701px) {
+    .center_container {
+        top: 20%;
+        left: 30%;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .center_container {
+        top: 5%;
+        left: 20%;
+        width: 60%;
+    }
 }
