@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Github",
+        "info": "luximus-hunter",
+        "icon": "github",
+        "link": "https://github.com/luximus-hunter"
+    },
+    {
+        "name": "Spotify",
+        "info": "LXMS",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/user/yxmq93tlmfomm2ir62cs0bq0u"
+    },
+    {
+        "name": "Discord",
+        "info": "Luximus#2048",
+        "icon": "discord"
+    }
+]
