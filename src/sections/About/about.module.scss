@@ -1,8 +1,25 @@
+.color {
+    background-color: #15140e;
+    padding: 70px 0;
+}
+
 .container {
     width: 80%;
-    max-width: 500px;
+    max-width: 700px;
     margin: auto;
+    padding: 70px;
     color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 5em;
+}
+
+.paragraph {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 700px) {

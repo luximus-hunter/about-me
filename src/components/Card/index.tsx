@@ -1,15 +1,17 @@
+import Icon from '../Icon';
+import { Icons } from '../Icon';
 import styles from './card.module.scss';
 
 interface Props {
     title: string;
     info: string;
-    image: string;
+    icon: Icons;
     link?: string;
 }
 
-const Card = ({ title, image, info, link }: Props) => (
+const Card = ({ title, icon, info, link }: Props) => (
     <div className={styles.container}>
-        <img className={styles.logo} src={image} alt={title + '_logo'} />
+        <Icon className={styles.icon} name={icon} />
         <div className={styles.content}>
             {link ? (
                 <a href={link} className={styles.link}>

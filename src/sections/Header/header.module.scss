@@ -1,9 +1,13 @@
 .container {
+    background-color: #15140e;
     position: relative;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .banner {
     width: 100%;
+    // max-height: 100vh;
 }
 
 .center_container {

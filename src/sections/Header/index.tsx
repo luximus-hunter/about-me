@@ -4,11 +4,13 @@ import headerImg from '../../assets/header/banner.jpg';
 import styles from './header.module.scss';
 
 const Header = () => (
-    <header className={styles.container}>
+    <header id='Header' className={styles.container}>
         <img className={styles.banner} src={headerImg} alt='website_banner' />
         <div className={styles.center_container}>
             <img className={styles.avatar} src={avatarImg} alt='avatar' />
-            <img className={styles.arrow} src={arrowImg} alt='down_arrow' />
+            <a href='#About' className={styles.arrow}>
+                <img className={styles.arrow} src={arrowImg} alt='down_arrow' />
+            </a>
         </div>
     </header>
 );
