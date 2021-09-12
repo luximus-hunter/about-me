@@ -1,25 +1,25 @@
 name: 'Prettier Lint Check'
 
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
+    prettier:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
 
-      - name: Prettify code
-        uses: creyD/prettier_action@v3.3
-        with:
-          commit_message: 📝 (format code)
-          prettier_options: --write **/*.{js,jsx,ts,tsx,css,scss,md}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Prettify code
+              uses: creyD/prettier_action@v3.3
+              with:
+                  commit_message: 📝 (format code)
+                  prettier_options: --write **/*.{js,jsx,ts,tsx,css,scss,md}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
