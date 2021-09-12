@@ -14,9 +14,16 @@ const formatedSocials: SocialItem[] = [...socials] as SocialItem[];
 
 const Socials = () => (
     <section id='Socials' className={styles.color}>
+        <h1 className={styles.title}>Socials</h1>
         <div className={styles.container}>
-            {formatedSocials.map((item) => (
-                <Card title={item.name} info={item.info} icon={item.icon} link={item.link} />
+            {formatedSocials.map((item, i) => (
+                <Card
+                    key={i}
+                    title={item.name}
+                    info={item.info}
+                    icon={item.icon}
+                    link={item.link}
+                />
             ))}
         </div>
     </section>

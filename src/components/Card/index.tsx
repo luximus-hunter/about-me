@@ -9,21 +9,25 @@ interface Props {
     link?: string;
 }
 
-const Card = ({ title, icon, info, link }: Props) => (
-    <div className={styles.container}>
-        <Icon className={styles.icon} name={icon} />
-        <div className={styles.content}>
-            {link ? (
-                <a href={link} className={styles.link}>
-                    <span className={styles.title}>{title}</span>
-                </a>
-            ) : (
+const Card = ({ title, icon, info, link }: Props) =>
+    link ? (
+        <a className={styles.container} href={link}>
+            <Icon className={styles.icon} name={icon} />
+            <div className={styles.content}>
                 <span className={styles.title}>{title}</span>
-            )}
 
-            <span className={styles.info}>{info}</span>
+                <span className={styles.info}>{info}</span>
+            </div>
+        </a>
+    ) : (
+        <div className={styles.container}>
+            <Icon className={styles.icon} name={icon} />
+            <div className={styles.content}>
+                <span className={styles.title}>{title}</span>
+
+                <span className={styles.info}>{info}</span>
+            </div>
         </div>
-    </div>
-);
+    );
 
 export default Card;
