@@ -1,0 +1,14 @@
+[
+    {
+        "name": "VS Code",
+        "icon": "code"
+    },
+    {
+        "name": "Visual Studio",
+        "icon": "visualstudio"
+    },
+    {
+        "name": "Git",
+        "icon": "git"
+    }
+]

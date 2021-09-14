@@ -1,5 +1,9 @@
 [
     {
+        "name": "NodeJS",
+        "icon": "nodejs"
+    },
+    {
         "name": "ReactJS",
         "icon": "reactjs"
     },
@@ -34,5 +38,13 @@
     {
         "name": ".NET",
         "icon": "dotnet"
+    },
+    {
+        "name": "MySQL",
+        "icon": "mysql"
+    },
+    {
+        "name": "SQLite",
+        "icon": "sqlite"
     }
 ]
