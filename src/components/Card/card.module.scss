@@ -2,10 +2,7 @@
     display: block;
 
     color: #15140e;
-
-    width: 30%;
-
-    margin-right: 5%;
+    background-color: #ffffff;
 
     text-align: center;
 
@@ -15,10 +12,6 @@
     overflow: hidden;
 
     box-shadow: 0 0 10px #0004;
-
-    &:last-child {
-        margin: 0;
-    }
 }
 
 a.container {
@@ -52,7 +45,7 @@ a.container {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .info {
