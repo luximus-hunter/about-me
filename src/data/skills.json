@@ -1,0 +1,38 @@
+[
+    {
+        "name": "ReactJS",
+        "icon": "reactjs"
+    },
+    {
+        "name": "NextJS",
+        "icon": "nextjs"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "typescript"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "javascript"
+    },
+    {
+        "name": "SASS",
+        "icon": "sass"
+    },
+    {
+        "name": "CSS",
+        "icon": "css"
+    },
+    {
+        "name": "HTML",
+        "icon": "html"
+    },
+    {
+        "name": "C#",
+        "icon": "csharp"
+    },
+    {
+        "name": ".NET",
+        "icon": "dotnet"
+    }
+]

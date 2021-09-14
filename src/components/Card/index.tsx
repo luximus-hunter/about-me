@@ -4,7 +4,7 @@ import styles from './card.module.scss';
 
 interface Props {
     title: string;
-    info: string;
+    info?: string;
     icon: Icons;
     link?: string;
 }
