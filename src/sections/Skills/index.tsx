@@ -16,11 +16,7 @@ const Skills = () => (
         <h1 className={styles.title}>Skills</h1>
         <div className={styles.container}>
             {formatedSkills.map((item, i) => (
-                <Card
-                    key={i}
-                    title={item.name}
-                    icon={item.icon}
-                />
+                <Card key={i} title={item.name} icon={item.icon} />
             ))}
         </div>
     </section>
