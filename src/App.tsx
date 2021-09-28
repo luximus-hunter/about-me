@@ -17,7 +17,7 @@ const App = () => (
         <Skills />
         <Divider from='#9966FF' to='#FFFFFF' />
         <Tools />
-        <Divider from="#FFFFFF" to="#15140E" />
+        <Divider from='#FFFFFF' to='#15140E' />
         <Footer />
     </div>
 );
