@@ -12,6 +12,10 @@
         "icon": "nextjs"
     },
     {
+        "name": "MarkDown",
+        "icon": "markdown"
+    },
+    {
         "name": "TypeScript",
         "icon": "typescript"
     },
