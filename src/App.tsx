@@ -1,5 +1,6 @@
 import About from './sections/About';
 import Divider from './components/Divider';
+import Footer from './sections/Footer';
 import Header from './sections/Header';
 import Skills from './sections/Skills';
 import Socials from './sections/Socials';
@@ -16,6 +17,8 @@ const App = () => (
         <Skills />
         <Divider from='#9966FF' to='#FFFFFF' />
         <Tools />
+        <Divider from='#FFFFFF' to='#15140E' />
+        <Footer />
     </div>
 );
 
