@@ -1,3 +1,5 @@
+import obsidian from '../../assets/icons/obsidian.png';
+
 export type Icons =
     | 'discord'
     | 'spotify'
@@ -16,7 +18,10 @@ export type Icons =
     | 'sqlite'
     | 'code'
     | 'visualstudio'
-    | 'git';
+    | 'git'
+    | 'obsidian'
+    | 'markdown'
+    | 'terminal';
 
 interface IconProps {
     name: Icons;
@@ -24,6 +29,16 @@ interface IconProps {
 }
 
 // skills
+const Markdown = () => (
+    <svg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <title>Markdown</title>
+        <path
+            fill='#000000'
+            d='M22.27 19.385H1.73A1.73 1.73 0 010 17.655V6.345a1.73 1.73 0 011.73-1.73h20.54A1.73 1.73 0 0124 6.345v11.308a1.73 1.73 0 01-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z'
+        />
+    </svg>
+);
+
 const Typescript = () => (
     <svg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
         <title>TypeScript</title>
@@ -205,6 +220,20 @@ const Git = () => (
     </svg>
 );
 
+const Obsidian = () => (
+    <img style={{ width: '100%', height: '100%' }} alt='obsidian' src={obsidian} />
+);
+
+const Terminal = () => (
+    <svg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <title>Windows Terminal</title>
+        <path
+            fill='#4D4D4D'
+            d='M8.165 6V3h7.665v3H8.165zm-.5-3H1c-.55 0-1 .45-1 1v2h7.665V3zM23 3h-6.67v3H24V4c0-.55-.45-1-1-1zM0 6.5h24V20c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V6.5zM11.5 18c0 .3.2.5.5.5h8c.3 0 .5-.2.5-.5v-1.5c0-.3-.2-.5-.5-.5h-8c-.3 0-.5.2-.5.5V18zm-5.2-4.55l-3.1 3.1c-.25.25-.25.6 0 .8l.9.9c.25.25.6.25.8 0l4.4-4.4a.52.52 0 0 0 0-.8l-4.4-4.4c-.2-.2-.6-.2-.8 0l-.9.9c-.25.2-.25.55 0 .8l3.1 3.1z'
+        />
+    </svg>
+);
+
 const Icon = ({ name, className }: IconProps) => {
     let icon;
 
@@ -220,6 +249,9 @@ const Icon = ({ name, className }: IconProps) => {
             icon = <Github />;
             break;
         // skills
+        case 'markdown':
+            icon = <Markdown />;
+            break;
         case 'typescript':
             icon = <Typescript />;
             break;
@@ -265,6 +297,12 @@ const Icon = ({ name, className }: IconProps) => {
             break;
         case 'git':
             icon = <Git />;
+            break;
+        case 'obsidian':
+            icon = <Obsidian />;
+            break;
+        case 'terminal':
+            icon = <Terminal />;
             break;
     }
 

@@ -10,5 +10,13 @@
     {
         "name": "Git",
         "icon": "git"
+    },
+    {
+        "name": "Obsidian",
+        "icon": "obsidian"
+    },
+    {
+        "name": "Terminal",
+        "icon": "terminal"
     }
 ]
