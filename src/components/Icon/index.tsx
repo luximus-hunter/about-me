@@ -198,8 +198,6 @@ const Terminal = () => (
 
 // system
 
-
-
 const Icon = ({ name, className }: IconProps) => {
     let icon;
 
