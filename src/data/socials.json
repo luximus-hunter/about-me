@@ -6,14 +6,9 @@
         "link": "https://github.com/luximus-hunter"
     },
     {
-        "name": "Spotify",
-        "info": "LXMS",
-        "icon": "spotify",
-        "link": "https://open.spotify.com/user/yxmq93tlmfomm2ir62cs0bq0u"
-    },
-    {
-        "name": "Discord",
-        "info": "Luximus#2048",
-        "icon": "discord"
+        "name": "LinkedIn",
+        "info": "Thomas Lipman",
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/thomas-lipman/"
     }
 ]

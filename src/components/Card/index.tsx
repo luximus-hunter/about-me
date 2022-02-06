@@ -7,11 +7,14 @@ interface Props {
     info?: string;
     icon: Icons;
     link?: string;
+    small?: boolean;
 }
 
-const Card = ({ title, icon, info, link }: Props) =>
-    link ? (
-        <a className={styles.container} href={link}>
+const Card = ({ title, icon, info, link, small }: Props) => {
+    const className = small ? `${styles.container} ${styles.small}` : styles.container;
+
+    return link ? (
+        <a className={className} href={link}>
             <Icon className={styles.icon} name={icon} />
             <div className={styles.content}>
                 <span className={styles.title}>{title}</span>
@@ -20,7 +23,7 @@ const Card = ({ title, icon, info, link }: Props) =>
             </div>
         </a>
     ) : (
-        <div className={styles.container}>
+        <div className={className}>
             <Icon className={styles.icon} name={icon} />
             <div className={styles.content}>
                 <span className={styles.title}>{title}</span>
@@ -29,5 +32,6 @@ const Card = ({ title, icon, info, link }: Props) =>
             </div>
         </div>
     );
+};
 
 export default Card;

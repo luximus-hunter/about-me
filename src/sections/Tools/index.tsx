@@ -7,6 +7,7 @@ interface SkillItem {
     name: string;
     info: string;
     icon: Icons;
+    link?: string;
 }
 
 const formatedTools: SkillItem[] = [...tools] as SkillItem[];
@@ -16,7 +17,7 @@ const Tools = () => (
         <h1 className={styles.title}>Tools</h1>
         <div className={styles.container}>
             {formatedTools.map((item, i) => (
-                <Card key={i} title={item.name} icon={item.icon} />
+                <Card key={i} title={item.name} icon={item.icon} link={item.link} />
             ))}
         </div>
     </section>

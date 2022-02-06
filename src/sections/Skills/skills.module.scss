@@ -17,15 +17,16 @@
     margin: auto;
     padding-bottom: 65px;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 5%;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-column-gap: 2%;
     grid-row-gap: 20px;
 }
 
 @media only screen and (max-width: 700px) {
     .container {
         width: 90%;
-        display: block;
+        grid-template-columns: 47% 47%;
+        grid-column-gap: 6%;
     }
 
     .title {

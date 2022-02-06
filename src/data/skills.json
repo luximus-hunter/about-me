@@ -44,11 +44,7 @@
         "icon": "dotnet"
     },
     {
-        "name": "MySQL",
-        "icon": "mysql"
-    },
-    {
-        "name": "SQLite",
-        "icon": "sqlite"
+        "name": "SQL",
+        "icon": "sql"
     }
 ]

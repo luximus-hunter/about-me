@@ -25,7 +25,8 @@
 @media only screen and (max-width: 700px) {
     .container {
         width: 90%;
-        display: block;
+        grid-template-columns: 47% 47%;
+        grid-column-gap: 6%;
     }
 
     .title {
