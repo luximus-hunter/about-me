@@ -1,5 +1,5 @@
-const execa = require('execa');
-const fs = require('fs');
+import execa from 'execa';
+import { writeFile } from 'fs';
 
 (async () => {
     try {
@@ -15,7 +15,7 @@ const fs = require('fs');
         await execa('npm', ['run', 'build']);
 
         // add CNAME
-        await fs.writeFile(`./build/CNAME`, 'lxms.nl', () => {});
+        await writeFile(`./build/CNAME`, 'lxms.nl', () => {});
 
         // add and commit
         await execa('git', ['--work-tree', 'build', 'add', '--all']);
